@@ -41,6 +41,7 @@ function navGeneraor(itemClass){
 
 function mainGenerator(itemClass){
     const main=document.createElement('main');
+    main.setAttribute('id',itemClass);
     main.classList.add(itemClass);
     
     return main;
@@ -68,7 +69,7 @@ function onLoad(){
     const nav=navGeneraor('nav');
     content.appendChild(nav);
 
-    const intoContext=mainGenerator("tab-content'");
+    const intoContext=mainGenerator("tab-content");
     content.appendChild(intoContext);
 
     const footer=footerGenerator('footer', 'Copyright © 2022 DimitarGateshki');
