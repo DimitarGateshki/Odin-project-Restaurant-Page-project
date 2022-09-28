@@ -17,7 +17,7 @@ function createFood(src,text,price,alt){
     img.setAttribute('alt',alt);
 
 
-    const description =document.createElement('p');
+    const description =document.createElement('div');
     description.classList.add('description');
 
     const name=document.createElement('h3');
@@ -29,7 +29,7 @@ function createFood(src,text,price,alt){
     description.appendChild(name);
     description.appendChild(foodPrice);
 
-    food.appendChild(ing);
+    food.appendChild(img);
     food.appendChild(description);
 
     return food;
@@ -46,12 +46,35 @@ function loadMenu(){
 
     const foods=[
         createFood(
-
+            './imgs/290000004_1376358192855226_3488743862809103377_n - Copy.jpg',
+            'Пролетна паста',
+            '17лв',
+            'a'
+        ),
+    
+        createFood(
+            './imgs/290278212_3161830447479816_1473419019255415294_n.jpg',
+            'Патешко магре',
+            '25лв',
+            'a'
+        ),
+        createFood(
+            './imgs/290544357_1040772243464909_1853727914825713925_n.jpg',
+            'Кракен',
+            '35лв',
+            'a'
+        ),
+        createFood(
+            './imgs/290873136_1175100296668688_1681641588478369742_n.jpg',
+            'Ризото',
+            '17лв',
+            'a'
         )
+
     ];
 
-    foods.forEach((food)=>{
-        content.appendChild(food);
+    foods.forEach((e)=>{
+        content.appendChild(e);
         });
 }
 
